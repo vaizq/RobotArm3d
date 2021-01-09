@@ -3,13 +3,16 @@
 */
 
 #include <Servo.h>
+#include "Point2d.h"
 
-Servo base;
-void setup() {
-
+void setup() 
+{
+	Serial.begin(9600);
 }
 
 // the loop function runs over and over again until power down or reset
-void loop() {
-  
+void loop() 
+{
+
+	
 }
