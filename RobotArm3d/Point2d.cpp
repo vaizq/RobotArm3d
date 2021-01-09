@@ -11,6 +11,18 @@ Point2d::Point2d(float x, float y) :
 	x(x), y(y)
 {}
 
+void Point2d::add(Point2d p)
+{
+	this->x += p.x;
+	this->y += p.y;
+}
+
+void Point2d::mul(float scalar)
+{
+	this->x *= scalar;
+	this->y *= scalar;
+}
+
 double Point2d::length()
 {
 	return sqrt(x*x + y*y);
@@ -21,6 +33,7 @@ Point2d Point2d::asUnit()
 	float length = this->length();
 	return Point2d(this->x / length, this->y / length);
 }
+
 float Point2d::dotProduct(Point2d a, Point2d b)
 {
 	return a.x * b.x + a.y * b.y;
