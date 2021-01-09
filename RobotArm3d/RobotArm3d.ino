@@ -33,9 +33,22 @@ void setup()
 }
 
 // the loop function runs over and over again until power down or reset
+int count = 0;
 void loop() 
 {
 	robotArm.updatePos();
+
+	if (myJoystick.readXAxis() < 10 && myJoystick.readYAxis() >= Joystick::MAX_VAL - 10)
+	{
+		if (count >= 500)
+		{
+			robotArm.punch();
+			count = 0;
+		}
+		count++;
+	}
+	else
+		count = 0;
 
 	delay(10);
 }
