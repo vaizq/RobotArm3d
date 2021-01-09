@@ -30,12 +30,18 @@
     <ClInclude Include="Joystick.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RobotArm2d.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Point2d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Joystick.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RobotArm2d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

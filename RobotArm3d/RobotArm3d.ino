@@ -4,35 +4,38 @@
 // Libraries
 #include "Point2d.h"
 #include "Joystick.h"
+#include "RobotArm2d.h"
 #include <Servo.h>
 
 // Definitions
-#define SERVO_0 3
+#define SERVO_1 3
+#define SERVO_2 5
 #define JOYSTICK_VRX A0
 #define JOYSTICK_VRY A1
 #define JOYSTICK_SW 2
 
 // Variables
 Servo servo1;
+Servo servo2;
 Joystick myJoystick;
+RobotArm2d robotArm;
+
+
 
 void setup() 
 {
 	Serial.begin(9600);
 
-	servo1.attach(SERVO_0);
+	servo1.attach(SERVO_1);
+	servo2.attach(SERVO_2);
 	myJoystick.attach(JOYSTICK_VRX, JOYSTICK_VRY, JOYSTICK_SW);
+	robotArm.attach(myJoystick, servo1, servo2);
 }
 
 // the loop function runs over and over again until power down or reset
 void loop() 
 {
-	/*Serial.print("X_axis: ");
-	Serial.print(myJoystick.readXAxis());
-	Serial.print("	Y_axis: ");
-	Serial.println(myJoystick.readYAxis());*/
-	
-	Serial.println(myJoystick.readButton());
+	robotArm.updatePos();
 
-	delay(100);
+	delay(10);
 }
