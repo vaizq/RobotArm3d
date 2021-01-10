@@ -1,5 +1,5 @@
 /*
-* Eliakses and Väinös arduino software for 3axis desktop robotic arm
+* Eliakses and VÃ¤inÃ¶s arduino software for 3axis desktop robotic arm
 */
 // Libraries
 #include "Point2d.h"
@@ -7,7 +7,7 @@
 #include "RobotArm2d.h"
 #include <Servo.h>
 
-// TODO: Add stepper and controller for stepper
+// TODO: Elias pleas add stepper to this code.
 
 // Definitions
 #define SERVO_1 3
