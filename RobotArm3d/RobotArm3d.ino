@@ -7,6 +7,8 @@
 #include "RobotArm2d.h"
 #include <Servo.h>
 
+// TODO: Add stepper and controller for stepper
+
 // Definitions
 #define SERVO_1 3
 #define SERVO_2 5
