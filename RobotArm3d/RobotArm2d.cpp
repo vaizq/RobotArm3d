@@ -18,3 +18,20 @@ void RobotArm2d::updatePos()
 	servo0.write(servo0Angle);
 	servo1.write(servo1Angle);
 }
+
+void RobotArm2d::punch()
+{
+	// Load punch
+	servo0.write(MAX_ANGLE);
+	servo1.write(0);
+	delay(1000);
+
+	// Punch
+	servo0.write(0);
+	servo1.write(MAX_ANGLE);
+	delay(10);
+	// Load agen
+	servo0.write(MAX_ANGLE);
+	servo1.write(0);
+	delay(1000);
+}
